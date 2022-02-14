@@ -1,0 +1,48 @@
+.footer {
+   
+}
+.devs{
+    color: var(--white);  
+    display:flex;
+    align-items:center;
+    justify-content: end;
+    gap:100px;
+    padding-right:100px;
+}
+.dev-title{
+    font-size:1.3rem;
+}
+.dev-list {
+    display:flex;
+
+    align-items:center;
+    justify-content: center;
+    color: var(--white);
+    gap:30px;
+}
+.dev img{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    border:2px solid var(--white);
+    transition: .2s ease all;
+
+}
+.dev {
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    gap:20px;
+    flex-direction: column;
+}
+.dev a {
+    transition: .2s ease all;
+}
+.dev:hover a{
+    color:var(--accent);
+}
+
+.dev:hover img{
+    border:2px solid var(--accent)
+
+}

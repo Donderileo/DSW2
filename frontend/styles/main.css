@@ -1,0 +1,62 @@
+:root {
+    /* --background-gradient: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
+    
+    /* --background-color:: #2d3436;
+    --background-gradient: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
+
+    --background-color: #080C24; 
+    --background-gradient: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    --x: #343851;
+    --purple: #a6b2ebff;
+    --white: #EBEEFF;
+    --blue: #168581;
+    --accent: #FF6182;
+
+    --cor-de-texto: rgb(0, 0, 0);
+    --cor-de-texto-bg: rgba(0, 0, 0, 0.04);
+
+    --cor-de-texto-bg2: rgba(33, 37, 59, 0.04);
+
+    --cor-das-labels: #130f40;
+
+    --cor-de-fundo-geral: #080C24;
+    --cor-de-fundo-divs: #EBEEFF;
+
+    --cor-de-fundo-divs2: #ffffffdc;
+
+
+    --cor-de-degrade-init: var(--cor-das-labels);
+    --cor-de-degrade-end: var(--cor-de-fundo-geral);
+
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    height:100vh;
+    background: var(--background-color)
+    /* background-image: var(--background-gradient); */
+}
+
+.layout{
+    display:grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 88% 12%;
+    height:100%;
+    width:100%;    
+}
+
+.u-non-blurred {
+    position: relative;
+    z-index: 1;
+}

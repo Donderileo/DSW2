@@ -1,0 +1,62 @@
+.content{
+    /* background:yellow; */
+    padding:50px;
+
+    display:flex;
+
+    height:100%;
+
+    justify-content: center;
+    flex-direction: column;
+
+}
+.disclaimer {
+    padding: 16px;
+
+    height: 30%;
+    font-size:5rem;
+    color: var(--white);
+}
+.name {
+    color:var(--accent);
+    border-bottom:5px solid var(--accent);
+}
+.appointments {
+    justify-items: center;
+    margin-top:100px;
+    justify-self:center;
+}
+.appointments-title{
+    font-size:2rem;
+    color: var(--white);
+    margin-bottom:30px;
+}
+.appointments-list{
+    height:400px;
+    font-size:1.5rem;
+}
+.item1{
+    margin-bottom:10px;
+    color: var(--blue);
+}
+.item2{
+    margin-bottom:10px;
+    color: var(--blue);
+}
+
+a.editar-admin-btn {
+	color: var(--cor-de-fundo-divs); 
+	
+	text-decoration: none;
+	cursor: pointer;
+
+	font-weight: bold;
+  font-size: 60%;
+
+  padding: 5px;
+
+}
+
+a.editar-admin-btn:hover{
+	filter: brightness(50%);
+}

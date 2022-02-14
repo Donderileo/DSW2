@@ -1,0 +1,109 @@
+body {
+	background-color: var(--cor-de-fundo-geral);
+
+	font-size: 16px;
+}
+
+.containerA1{
+	width: 100%;
+	height: 100%;
+	
+	display: flex;
+	justify-content: center;
+
+
+}
+
+.div-login {
+	background-color: var(--cor-de-fundo-divs);
+	box-shadow: 10px 10px 15px 2px rgba(0, 0, 0, 0.15);
+
+	width: 400px;
+	height: 400px;
+	border-radius: 1em;
+	margin: auto; 	
+
+	padding: 10px;
+
+	/*glass effect*/
+	background: rgba(255,255,255,0.7);
+	backdrop-filter: blur( 10px );
+	-webkit-backdrop-filter: blur( 10px );
+
+
+}
+
+.form-login {
+	padding: 20px 50px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center
+}
+
+.label-login {
+	padding: 30px;
+
+	color: var(--cor-das-labels);
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;	
+
+}
+
+.user, .pass, .btn-enviar {
+	background: var(--cor-de-texto-bg);
+
+	color: var(--cor-de-texto);
+	text-align: center;
+	
+	filter: brightness(0%);
+
+	width: 80%;
+	
+	padding: 10px;
+	border-radius: 0.5em;
+	
+	margin-top:15px;
+
+	outline: none;
+	box-sizing: border-box;
+	border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.user:focus, .pass:focus {
+	border: 2px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.btn-enviar {
+	cursor: pointer;
+
+	color: var(--cor-de-fundo-divs); 
+	font-weight: bold;
+
+	filter: brightness(80%);
+
+	border-radius: 10em;
+
+	margin-top:50px;
+
+	background: linear-gradient(to bottom right, var(--cor-de-degrade-init), var(--cor-de-degrade-end));
+}
+
+.btn-enviar:hover{
+	filter: brightness(150%);
+}
+
+a.esqueceu-senha {
+	color: var(--cor-das-labels);
+	text-align: center;
+	
+	text-decoration: none;
+
+	display: block;
+}
+
+a.esqueceu-senha:hover{
+	filter: brightness(150%);
+}
+

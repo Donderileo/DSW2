@@ -1,0 +1,181 @@
+body {
+	background-color: var(--cor-de-fundo-geral);
+
+	font-size: 16px;
+}
+
+.containerB1{
+	display: flex;
+	justify-content: center;
+
+	width: 100%;
+	height: 100%;
+}
+
+.div-registro {
+	background-color: var(--cor-de-fundo-divs);
+	box-shadow: 10px 10px 15px 2px rgba(0, 0, 0, 0.15);
+
+	width: 600px;
+	height: 650px;
+	border-radius: 1em;
+	margin: auto; 	
+
+	padding: 10px;
+
+	/*glass effect*/
+	background: rgba(255,255,255,0.7);
+	backdrop-filter: blur( 10px );
+	-webkit-backdrop-filter: blur( 10px );
+
+
+}
+
+.form-registro {
+	padding: 20px 50px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center
+}
+
+.label-registro {
+	padding: 30px;
+	margin-bottom: 50px;
+	color: var(--cor-das-labels);
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;	
+
+}
+
+.field, .btn-enviar {
+	background: var(--cor-de-texto-bg);
+
+	color: var(--cor-de-texto);
+	text-align: center;
+	
+	filter: brightness(0%);
+
+	width: 55%;
+	
+	padding: 10px;
+	border-radius: 0.5em;
+	
+	margin-top:15px;
+
+	outline: none;
+	box-sizing: border-box;
+	border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.user:focus, .pass:focus {
+	border: 2px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.btn-enviar {
+	cursor: pointer;
+
+	color: var(--cor-de-fundo-divs); 
+	font-weight: bold;
+
+	filter: brightness(80%);
+
+	border-radius: 10em;
+
+	margin-top:50px;
+
+	background: linear-gradient(to bottom right, var(--cor-de-degrade-init), var(--cor-de-degrade-end));
+}
+
+.btn-enviar:hover{
+	filter: brightness(150%);
+}
+
+.group {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  .btn {
+	transition: background 400ms;
+	color: #fff;
+	background-color: #6200ee;
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	border: 0;
+	border-radius: 0.25rem;
+	cursor: pointer;
+  }
+  .btn:hover {
+	background-color: #6100aa;
+  }
+  
+  input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 300px;
+	border: none;
+	border-bottom: 1px solid #080C24;
+  }
+  
+  input:focus {
+	outline: none;
+  }
+  
+  label {
+	color: gray;
+	font-size: 18px;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: 0.2s ease all;
+  }
+  
+  input:focus ~ label, input:valid ~ label {
+	top: -20px;
+	font-size: 15px;
+	color: #FF6182;
+  }
+  
+  .bar {
+	position: relative;
+	display: block;
+	width: 300px;
+  }
+  
+  .bar:before, .bar:after {
+	content: '';
+	height: 3px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #FF6182;
+	transition:0.2s ease all; 
+  }
+  
+  .bar:before {
+	left: 50%;
+  }
+  
+  .bar:after {
+	right: 50%;
+  }
+  
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width: 50%;
+  }
+  
+  .form-data {
+	  align-items: center;
+	  justify-content: center;
+	  display: flex;
+	  flex-direction: column;
+  }
+
