@@ -1,105 +1,126 @@
-body {
-	background-color: var(--cor-de-fundo-geral);
-
-	font-size: 16px;
-
-
-	/* background-image: url("https://cdnb.artstation.com/p/assets/covers/images/025/301/401/large/ronald-nascimento-02.jpg?1585342393"); */
-
-	backdrop-filter: blur( 5px );
-
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
 .containerA1{
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	justify-content: center;
-
-
-	width: 100%;
+	align-items: center;
 	height: 100%;
-
-	padding: 2% 60% 1% 1% ;
+	padding:50px;
 }
 
-.containerA2{
+
+.containerA2_text{
 	display: flex;
 	flex-direction: column;
-
-	width: 100%;
-	height: 100%;
-
+	gap:50px;
+	height: 90%;
 	filter: opacity(0.9);
-
 	border-radius: 25px;
 
-	padding: 20px;
-
+	padding: 30px;
 	/*glass effect*/
 	background: rgba(255,255,255,0.075);
 	backdrop-filter: blur( 10px );
 	-webkit-backdrop-filter: blur( 10px );
 }
 
-.landing-header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	width: 100%;
-	height: 40%;
-	
+.landing-header {
+	height:30%;
+	display:flex;
+	flex-direction: column;
+	gap:10px;
+	color:var(--white);
+	width:100%;
+	text-align: center;
+	padding-top:40px;
 }
 
-
-.header-label{
-	color: var(--cor-de-fundo-divs); 
-	font-size: 2em;
-
+.title {
+	font-size:3rem;
+	font-weight:600;
+	color:var(--white);
 }
-
+.accent {
+	color: var(--accent)
+}
 
 .par1{
-	height: 10%;
 	color: var(--cor-de-fundo-divs); 
-
-	padding: 25px 10px;
+	font-size:1.5rem;
+	font-weight:500;
 }
 
 .par2{
 	color: var(--cor-de-fundo-divs); 
-
-	padding: 15px 10px 10px 10px;
-	
+	font-size:1.7rem;
+	line-height:2rem;	
+	padding:0 5%;
 }
 
 .landing-footer-btn{
-	width: 100%;
 	height: 100%;
 
 	display: flex;
-	align-items: flex-end;
-	justify-content: right;
+	align-items: center;
+	justify-content: center;
+	padding:30px;
 }
 
-a.entrar-btn {
-	color: var(--cor-de-fundo-divs); 
-	
-	text-decoration: none;
-
+.entrar-btn {
+	color: var(--accent); 
 	cursor: pointer;
 
 	font-weight: bold;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 
-	margin:30px;
-
-	border: 2px dotted var(--cor-de-fundo-divs);
-    padding: 16px;
-    border-radius: 8px
+	border: 2px solid var(--accent);
+    padding: 1rem;
+    border-radius: 8px;
+	transition: .3s ease all;
 }
 
-a.entrar-btn:hover{
-	filter: brightness(50%);
+.entrar-btn:hover{
+	box-shadow: 0px 0px 10px 1px var(--accent);
+}	
+
+.containerA2_img{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	gap:50px;
+	flex-direction: column;
+}
+
+img {
+	width:70%;
+}
+@media (max-width: 1024px) {
+	.landing-header{
+		padding-top:0;
+	}
+	html{
+		font-size:12px;
+	}
+	.containerA1 {
+		padding:20px;
+		grid-template-columns: 1fr;
+		gap:30px;
+	}
+	.containerA2_text{
+		padding:50px 20px;
+	}
+	.containerA2_img img{
+		display: none;
+	}
+	.entrar-btn{
+		padding:30px;
+	}
+}
+@media (max-width: 480px) {
+	html{
+		font-size:10px;
+	}
+	.containerA2_text{
+		height:100%;
+	}
+	
 }
