@@ -15,13 +15,15 @@ body {
 .div-registro {
 	background-color: var(--cor-de-fundo-divs);
 	box-shadow: 10px 10px 15px 2px rgba(0, 0, 0, 0.15);
+	
+	width: 90%;
 
-	width: 600px;
-	height: 650px;
-	border-radius: 1em;
+	max-width: 600px;
+
+	border-radius: 10px;
 	margin: auto; 	
 
-	padding: 10px;
+	padding: 0.8rem;
 
 	/*glass effect*/
 	background: rgba(255,255,255,0.7);
@@ -32,16 +34,15 @@ body {
 }
 
 .form-registro {
-	padding: 20px 50px;
-	
+	padding: 1rem 3rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center
 }
 
 .label-registro {
-	padding: 30px;
-	margin-bottom: 50px;
+	padding: 2rem;
+	margin-bottom: 3rem;
 	color: var(--cor-das-labels);
 	font-size: 25px;
 	font-weight: bold;
@@ -57,12 +58,11 @@ body {
 	
 	filter: brightness(0%);
 
-	width: 55%;
 	
-	padding: 10px;
-	border-radius: 0.5em;
+	padding: 0.8rem;
+	border-radius: 10px;
 	
-	margin-top:15px;
+	margin-top:1rem;
 
 	outline: none;
 	box-sizing: border-box;
@@ -81,9 +81,9 @@ body {
 
 	filter: brightness(80%);
 
-	border-radius: 10em;
+	border-radius: 10px;
 
-	margin-top:50px;
+	margin-top: 3rem;
 
 	background: linear-gradient(to bottom right, var(--cor-de-degrade-init), var(--cor-de-degrade-end));
 }
@@ -96,7 +96,7 @@ body {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 50px;
+	margin-bottom: 3rem;
 	align-items: center;
 	flex-direction: column;
   }
@@ -108,7 +108,7 @@ body {
 	padding: 1rem 2rem;
 	font-size: 1.5rem;
 	border: 0;
-	border-radius: 0.25rem;
+	border-radius: 10px;
 	cursor: pointer;
   }
   .btn:hover {
@@ -117,7 +117,7 @@ body {
   
   input {
 	font-size: 18px;
-	padding: 10px 10px 10px 5px;
+	padding: 0.8rem;
 	display: block;
 	width: 300px;
 	border: none;
@@ -168,14 +168,27 @@ body {
 	right: 50%;
   }
   
-  input:focus ~ .bar:before, input:focus ~ .bar:after {
+input:focus ~ .bar:before, input:focus ~ .bar:after {
 	width: 50%;
-  }
+}
   
-  .form-data {
-	  align-items: center;
-	  justify-content: center;
-	  display: flex;
-	  flex-direction: column;
-  }
+.form-data {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+		
+	margin-bottom: 3rem;
+}
 
+  @media (max-width: 480px) {
+	html {
+		font-size: 10px;
+	}
+
+	.containerB1 {
+		min-width: 400px;
+		width: 90%;
+		margin: 0 auto;
+	}
+}

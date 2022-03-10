@@ -107,3 +107,9 @@ a.esqueceu-senha:hover{
 	filter: brightness(150%);
 }
 
+@media (max-width: 480px) {
+	.containerA1{
+		width: 90%;
+		margin: 0 auto;
+	}
+}
