@@ -1,13 +1,10 @@
-.footer {
-   
-}
 .devs{
     color: var(--white);  
     display:flex;
     align-items:center;
     justify-content: end;
     gap:100px;
-    padding-right:100px;
+    padding: 0 100px;
 }
 .dev-title{
     font-size:1.3rem;
@@ -44,5 +41,13 @@
 
 .dev:hover img{
     border:2px solid var(--accent)
+}
+
+@media (max-width:1024px) {
+    .devs{ 
+        padding: 2rem;
+        gap:20px;
+        flex-direction: column;
+    }
 
 }

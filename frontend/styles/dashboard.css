@@ -1,25 +1,18 @@
-.content{
-    /* background:yellow; */
-    padding:50px;
-
-    display:flex;
-
-    height:100%;
-
-    justify-content: center;
-    flex-direction: column;
-
-}
 .disclaimer {
     padding: 16px;
-
     height: 30%;
-    font-size:5rem;
+    font-size:4rem;
     color: var(--white);
 }
 .name {
     color:var(--accent);
     border-bottom:5px solid var(--accent);
+}
+
+.wellcome img {
+    min-width:300px; 
+    width:50%;
+    height:auto;
 }
 .appointments {
     justify-items: center;
@@ -59,4 +52,10 @@ a.editar-admin-btn {
 
 a.editar-admin-btn:hover{
 	filter: brightness(50%);
+}
+
+@media (max-width:1024px) {
+   html{
+       font-size:10px;
+   }
 }

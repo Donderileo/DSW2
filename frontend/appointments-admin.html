@@ -17,14 +17,31 @@
 
 <body>
     <div class="layout u-non-blurred">
-        <nav class="sidebar">
+        <nav class="navbar">
 
-            <img src="images/zinorAdmin.png" class="foto-perfil">
+            <a href="dashboard.html">
+                <img src="images/logo.png" class="logo">
+            </a>
+
 
             <div class="items">
                 <a href="dashboard-admin.html">Home</a>
                 <a href="users-admin.html">Users</a>
                 <a href="appointments-admin.html" class="current">Appointments</a>
+            </div>
+
+            <div class="mobile">
+                <button id="btn-sand" class="btn-sandwich">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="items-mobile none">
+                    <a href="dashboard.html" class="current">Home</a>
+                    <a href="professionals.html">Professionals</a>
+                    <a href="appointments.html">Appointments</a>
+                    <a href="account.html">Account</a>
+                </div>
             </div>
         </nav>
         <main class="content">

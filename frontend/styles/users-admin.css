@@ -1,0 +1,41 @@
+.disclaimer {
+    padding: 16px;
+    height: 30%;
+    font-size:4rem;
+    color: var(--white);
+}
+.name {
+    color:var(--accent);
+    border-bottom:5px solid var(--accent);
+}
+
+.wellcome img {
+    min-width:300px; 
+    width:50%;
+    height:auto;
+}
+.item1{
+    margin-bottom:10px;
+    color: var(--blue);
+}
+.item2{
+    margin-bottom:10px;
+    color: var(--blue);
+}
+
+a.acao-btn {
+	color: var(--accent); 
+	cursor: pointer;
+
+	font-weight: bold;
+	font-size: 1.2rem;
+
+	border: 2px solid var(--accent);
+    padding:5px;
+    border-radius: 8px;
+	transition: .3s ease all;
+}
+
+a.acao-btn:hover{
+	box-shadow: 0px 0px 10px 1px var(--accent);
+}

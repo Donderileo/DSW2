@@ -47,15 +47,6 @@ body{
     background: var(--background-color)
     /* background-image: var(--background-gradient); */
 }
-
-.layout{
-    display:grid;
-    grid-template-columns: 300px auto;
-    grid-template-rows: 88% 12%;
-    height:100%;
-    width:100%;    
-}
-
 .u-non-blurred {
     position: relative;
     z-index: 1;
@@ -65,4 +56,26 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+.content { 
+    min-height:75vh;
+    padding:40px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+.none {
+    display:none !important;
+}
+
+@media (max-width:1024px) {
+    .content{
+        grid-template-columns: 1fr;
+        gap:50px;
+    }
+    html {
+        font-size:10px !important;
+    }
 }
