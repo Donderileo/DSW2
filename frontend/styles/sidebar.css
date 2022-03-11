@@ -32,12 +32,32 @@
 
 
 .current {
-    color: var(--accent);
-    border-bottom: 1px solid var(--accent);
+    color: var(--accent) !important;
+    border-bottom: 1px solid var(--accent) !important;
 }
 
 .mobile {
     display:none;
+}
+
+
+.items-mobile{
+    width:100vw;
+    height:fit-content;
+    background:var(--x);
+    
+
+    display:none;
+    flex-direction: column;
+
+    font-size:30px;
+}
+
+.items-mobile a {
+    border-bottom:1px solid var(--white);    
+    color:var(--white);
+    width:100%;
+    text-align:center;
 }
 
 
@@ -57,11 +77,17 @@
 }
 
 @media (max-width: 1024px) {
-    .mobile{
+    .mobile {
         display:block;
+    }
+    .items-mobile{
+        display:flex;
     }
     .items{
         display:none;
+    }
+    .content{
+        padding:0;
     }
 }
 
