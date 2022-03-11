@@ -105,6 +105,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
     grid-template-columns: 1fr;
     gap:50px;
     width:95%;
+    padding:30px;
   }
   .data {
     margin-top:0;
