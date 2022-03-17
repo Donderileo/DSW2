@@ -106,6 +106,9 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
     gap:50px;
     width:95%;
   }
+  .disclaimer{
+    text-align:center;
+  }
   .data {
     margin-top:0;
   }
