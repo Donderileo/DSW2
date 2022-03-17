@@ -1,0 +1,10 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5000,
+    "username": "postgres",
+    "password": "123",
+    "database": "banco_web2",
+    "synchronize": true,
+    "logging": true
+}
