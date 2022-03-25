@@ -12,11 +12,12 @@ export class RegisterController {
         const user = await service.execute({ username, hashPassword });
 
         if (user instanceof Error) {
-            return response.status(400).json(user.message);
+            return response.status(400).json({
+                "message": "User already exists"
+            });
         }
-
         return response.status(200).json({
-            "message": "User created",
+            "message": "Ok",
             "user": user
         })
     }

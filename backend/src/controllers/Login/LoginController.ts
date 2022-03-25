@@ -7,11 +7,15 @@ export class LoginController {
 
         const service = new LoginService();
         const user = await service.execute({ username, password });
-
         if (user instanceof Error) {
-            return response.status(400).json(user.message)
+            return response.status(400).json({
+                user
+            });
         }
 
-        return response.status(200).json(user)
+        return response.status(200).json({
+            "message": "Ok",
+            "token": user['token']
+        })
     }
 }
