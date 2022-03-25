@@ -15,17 +15,19 @@
     <div class="div-login">
         <p class="label-login">Acessar o sistema</p>
 
-        <form class="form-login" action="registro.html">
-            <input class="user" type="text" placeholder="Usuário">
-            <input class="pass" type="password" placeholder="Senha">
-            <input class="btn-enviar" type="submit" value="Entrar">
+        <form class="form-login">
+            <p id="err"></p>
+            <input id="username" type="text" placeholder="Usuário">
+            <input id="password" type="password" placeholder="Senha">
+            
         </form>    
-
-        <a class="esqueceu-senha" href="">Esqueceu a senha?</a>
-
+        <button class="btn-enviar">Login</button>
 
     </div>
 </div>
+
+<script src="js/login.js" defer></script>
+<script src="js/api.service.js" defer></script>
 
 </body>
 
