@@ -1,10 +1,13 @@
 {
-    "type": "postgres",
-    "host": "localhost",
-    "port": 5000,
-    "username": "postgres",
-    "password": "123",
-    "database": "banco_web2",
-    "synchronize": true,
-    "logging": true
+    "type": "sqlite",
+    "database": "./src/database/database.sqlite",
+    "migrations": [
+        "./src/database/migrations/**.ts"
+    ],
+    "entities": [
+        "./src/entities/**.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/database/migrations/"
+    }
 }

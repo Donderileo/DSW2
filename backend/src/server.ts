@@ -15,4 +15,4 @@ server.use(function(req, res, next) {
 server.use(express.json())
 server.use(routes)
 
-server.listen(3000, () => console.log("Server is running"))
+server.listen(3300, () => console.log("Server is running"))

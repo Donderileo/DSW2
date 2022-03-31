@@ -1,0 +1,1 @@
+yarn typeorm migration:create -n UpdateProfessional

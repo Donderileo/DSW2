@@ -1,11 +1,13 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import { v4 } from "uuid";
 
-export class CreateUser1644181511803 implements MigrationInterface {
+export class CreateProfessional1648695598871 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
+
         await queryRunner.createTable(
             new Table({
-                name: 'users',
+                name: 'professionals',
                 columns: [
                     {
                         name: "id",
@@ -13,30 +15,43 @@ export class CreateUser1644181511803 implements MigrationInterface {
                         isPrimary: true
                     },
                     {
-                        name: "username",
-                        type: "varchar",
-                        isUnique: true
+                        name: "user_id",
+                        type: "uuid",
                     },
                     {
-                        name: "password",
+                        name: "name",
                         type: "varchar",
                     },
                     {
-                        name: "role",
+                        name: "area",
                         type: "varchar",
-                        isNullable: true,
+                    },
+                    {
+                        name: "description",
+                        type: "varchar",
                     },
                     {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()"
                     },
+                ],
+                foreignKeys: [
+                    {
+                        name: "fk_user_id",
+                        columnNames: ["user_id"],
+                        referencedTableName: "users",
+                        referencedColumnNames: ["id"],
+                    }
                 ]
             })
         );
+        const uuid = v4()
+        // await queryRunner.query(`INSERT INTO USERS (ID, USERNAME, PASSWORD, ROLE) VALUES (${uuid},'admin', 'admin', 'Admin'`)
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("users");
+        await queryRunner.dropTable("professionals");
     }
+
 }

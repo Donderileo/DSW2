@@ -13,8 +13,8 @@ export class Appointment {
     @PrimaryColumn()
     professional_id: string;
 
-    @PrimaryColumn({ type: 'timestamp without time zone' })
-    date: Date;
+    @PrimaryColumn()
+    date: string;
 
     @CreateDateColumn()
     created_at: Date;
