@@ -43,6 +43,7 @@ async function searchProfessional(value) {
 
     const param = `value=${value}`
     requestOptions.method = 'GET'
+    //http://localhost:3300/professional/search?value=Don
     return await fetch(apiUrl() + '/professional/search?' + param, requestOptions).then((response) => {
         return handleResponse(response)
     })

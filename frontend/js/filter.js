@@ -3,10 +3,10 @@ const filter = document.getElementById('search')
 async function getAllProfessionals () {
     const response = await searchProfessional('')
     const professionals = response.professionals
-
+    console.log(professionals)
 
     const professionals_area = document.querySelector('.professionals-area')
-    var text = ''
+    let text = ''
     professionals.forEach(professional => {
         text += `
         <div class="professional-single-container">
@@ -25,9 +25,6 @@ async function getAllProfessionals () {
         </div>
         `
     }) 
-       
-    
-
    
     professionals_area.innerHTML = text
 }
@@ -42,7 +39,7 @@ filter.addEventListener("input", async (e) => {
 
 
     const professionals_area = document.querySelector('.professionals-area')
-    var text = ''
+    let text = ''
     professionals.forEach(professional => {
         text += `
         <div class="professional-single-container">
@@ -60,11 +57,7 @@ filter.addEventListener("input", async (e) => {
             </div>
         </div>
         `
-    }) 
-       
-    
-
-   
+    })    
     professionals_area.innerHTML = text
 })
 
