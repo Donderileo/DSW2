@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/registerRole.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <title>Donaderi Appointments - Create Role</title>
+</head>
+
+<body>
+<script src="js/checkOnlyLogin.js"></script>
+
+<div class="containerB1">
+    <div class="div-registro">
+        <p class="label-registro">Finish Register</p>
+        
+        <form class="form-data" id="form-data">
+          
+            <p id="err"></p>
+
+            <div class="group-select">
+              <p>Role: </p>
+              <select name="role" id="role">
+                <option value="Professional">Professional</option>
+                <option value="Client">Client</option>
+              </select>
+            </div>
+            
+            <!-- Client: "name": "Isabela", "age": "22" -->
+            <div class="client none">
+              <div class="group">
+                <input id="name" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+              </div>
+            
+              <div class="group">
+                <input id="age" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Age</label>
+              </div>
+            </div>
+            <!-- Professional: "name": "Professional", "area": "TI", "description": "Grandes consultorias o tempo todo"  -->
+
+            <div class="professional">
+              <div class="group">
+                <input id="nameProf" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+              </div>
+            
+              <div class="group">
+                <input id="area" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Area</label>
+              </div>
+
+              <div class="group">
+                <input id="description" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Description</label>
+              </div>
+            </div>
+
+
+          </form>
+          <button class="btn-enviar">Confirm</button>
+
+    </div>
+</div>
+<script src="js/registerRole.js" defer></script>
+<script src="js/api.service.js" defer></script>
+
+</body>
+
+</html>

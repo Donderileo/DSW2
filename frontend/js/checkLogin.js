@@ -2,16 +2,15 @@ const token = localStorage.getItem('token')
 
 if(!token){
     //redirect to login
-    window.location.href = "/login.html"
+    window.location.href = "login.html"
 }
 else {
     var {_, username, role} = parseJwt(token)
     if(!role){
-        //redirect to complete cadastro
-        //window.location.href = "/complete.html"
+        window.location.href = "complete.html"
     }
     if(role == 'adm'){
-        window.location.href = "/dashboard-admin.html"
+        window.location.href = "dashboard-admin.html"
     }
 }
 

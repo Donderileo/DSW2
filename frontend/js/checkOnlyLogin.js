@@ -1,19 +1,11 @@
 const token = localStorage.getItem('token')
-localStorage = {}
+
 if(!token){
     //redirect to login
-    window.location.href = "/login.html"
+    window.location.href = "login.html"
 }
 else {
-    let {_, username, role} = parseJwt(token)
-    if(!role){
-        //redirect to complete cadastro
-        //window.location.href = "/complete.html"
-        window.location.href = "/dashboard.html"
-    }
-    if(role != 'adm'){
-        window.location.href = "/dashboard.html"
-    }
+    var {_, username, role} = parseJwt(token)
 }
 
 function parseJwt (token) {

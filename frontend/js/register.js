@@ -13,9 +13,8 @@ btn.addEventListener("click",async (e) => {
 	} else {
 		err.innerHTML = ""
 		const response = await makeRegister({username: username, password: password})
-
 		if(response.message == "Ok"){
-			window.location.href = "/login.html"
+			window.location.href = "login.html"
 		}
 		else {
 			err.innerHTML = response.message

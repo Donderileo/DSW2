@@ -12,7 +12,7 @@ btn.addEventListener("click",async (e) => {
 	
 	if(response.message == "Ok"){
 		localStorage.setItem('token', response.token)
-		window.location.href = "/dashboard.html"
+		window.location.href = "dashboard.html"
 	}
 	else {
 		err.innerHTML = "Invalid User / Password"

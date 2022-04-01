@@ -3,6 +3,38 @@
     gap:50px;
 }
 
+.search {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.search input {
+    width:200px;
+	height:40px;
+	font-size:2rem;
+	border-radius: 10px;
+	border:none;
+    padding:0 10px;
+}
+
+.search button {
+    width:70px;
+    height:40px;
+    border:none;
+    border-radius:10px;
+    background:var(--accent);
+    color: var(--cor-das-labels);
+    font-weight: 900;
+
+    transition: .3s ease all;
+}
+
+.search button:hover {
+    transform:scale(120%);
+}
+
 .professionals-area {
     display: flex;
     flex-direction: row;
