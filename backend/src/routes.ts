@@ -12,6 +12,7 @@ import { GetAllClientController } from "./controllers/Client/GetAllClientControl
 import { CreateAppointmentController } from "./controllers/Appointments/CreateAppointmentController";
 import { GetAllAppointmentController } from "./controllers/Appointments/GetAllAppointmentController";
 import { DeleteAppointmentController } from "./controllers/Appointments/DeleteAppointmentController";
+import { SearchProfessionalController } from "./controllers/Professional/SearchProfessionalController";
 
 const routes = Router();
 
@@ -24,7 +25,7 @@ routes.delete("/user", new DeleteUserController().handle)
 routes.post("/professional", new CreateProfessionalController().handle)
 routes.get("/professional", new GetAllProfessionalController().handle)
 routes.put("/professional", new UpdateProfessionalController().handle)
-
+routes.get("/professional/search", new SearchProfessionalController().handle)
 
 routes.get("/client", new GetAllClientController().handle)
 routes.post("/client", new CreateClientController().handle)

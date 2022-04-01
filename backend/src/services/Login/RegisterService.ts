@@ -19,7 +19,7 @@ export class RegisterService {
         const user = repo.create({ username, password: hashPassword });
         await repo.save(user);
 
-        return user
+        return user;
 
     }
 }
