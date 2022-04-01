@@ -2,7 +2,24 @@
 .disclaimer {
   font-size:5rem;
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
+
+.disclaimer a {
+  font-size: 2rem;
+  padding: 15px;
+  border: 1px solid var(--accent);
+  width: fit-content;
+  transition: .3s ease all;
+  cursor: pointer;
+}
+
+.disclaimer a:hover {
+  background: var(--accent);
+}
+
 .name {
   color:var(--accent);
   border-bottom:5px solid var(--accent);
