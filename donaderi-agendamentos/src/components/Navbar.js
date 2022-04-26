@@ -1,16 +1,35 @@
 import React, { useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useWindowSize } from "../modules/utils";
 import styles from "../styles/navbar.module.css";
+import Swal from 'sweetalert2';
 
 export default function Navbar() {
   const size = useWindowSize();
-
   const [menu, setMenu] = useState(false);
 
   function openCloseMenu() {
     setMenu(!menu);
+  }
+
+  const navigate = useNavigate();
+  function logout() {
+    Swal.fire({
+      title: 'Atenção!',
+      text: 'Deseja mesmo sair ?',
+      icon: 'error',
+      confirmButtonText: 'Sim',
+      confirmButtonColor: '#3b67f2',
+      cancelButtonColor: '#2e3137',
+      showCancelButton: true,
+      cancelButtonText: 'Não'
+    }).then((e) => {
+      if (e.isConfirmed){
+        localStorage.removeItem('token');
+        navigate('/login');
+      } 
+    })
   }
 
   return (
@@ -55,6 +74,11 @@ export default function Navbar() {
             >
               Account
             </NavLink>
+          </li>
+          <li className={`${styles.navbar__item}`}>
+            <a onClick={logout}>
+              Logout
+            </a>
           </li>
         </ul>
 
