@@ -6,9 +6,8 @@ export default function WithNavbarLayout() {
   const navigate = useNavigate();
 
   var user = localStorage.getItem("token");
-
   useEffect(() => {
-    if (user === "undefined") {
+    if (user === null) {
       navigate("/login");
     }
   }, [user]);
