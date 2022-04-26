@@ -1,0 +1,10 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeLens": true,
+  "diffEditor.codeLens": true,
+  "editor.insertSpaces": true
+}

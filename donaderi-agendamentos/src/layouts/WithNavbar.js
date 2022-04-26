@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import { Outlet } from "react-router-dom";
 
 export default function WithNavbarLayout() {
-    return (
-        <>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-        </>
-    )
+  const navigate = useNavigate();
+
+  var user = localStorage.getItem("token");
+
+  useEffect(() => {
+    if (user === "undefined") {
+      navigate("/login");
+    }
+  }, [user]);
+
+  return (
+    <>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
+    </>
+  );
 }
