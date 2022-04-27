@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import WithNavbarLayout from "./layouts/WithNavbar";
 import WithoutNavbarLayout from "./layouts/WithoutNavbar";
+import Dashboard from "./pages/Dashboard";
 import Home2 from "./pages/Home2";
 import Home3 from "./pages/Home3";
 import Home4 from "./pages/Home4";
@@ -25,7 +26,7 @@ root.render(
           <Route path="/register" element={<Register />} />
         </Route>
         <Route element={<WithNavbarLayout />}>
-          <Route path="/dashboard" element={<Home2 />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/professional" element={<Home3 />} />
           <Route path="/appointments" element={<Home4 />} />
           <Route path="/account" element={<Home2 />} />

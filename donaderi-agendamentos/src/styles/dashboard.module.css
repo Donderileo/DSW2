@@ -1,0 +1,26 @@
+.container {
+  background: var(--black-background);
+  min-height: 85vh;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--white);
+  padding: 1rem 0;
+}
+
+.subtitle {
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--grey-text);
+}
+
+.consultas {
+  text-align: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-top: 10rem;
+}

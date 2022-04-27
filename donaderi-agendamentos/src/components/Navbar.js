@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { NavLink, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import { useWindowSize } from "../modules/utils";
 import styles from "../styles/navbar.module.css";
-import Swal from 'sweetalert2';
 
 export default function Navbar() {
   const size = useWindowSize();
@@ -16,20 +16,20 @@ export default function Navbar() {
   const navigate = useNavigate();
   function logout() {
     Swal.fire({
-      title: 'Atenção!',
-      text: 'Deseja mesmo sair ?',
-      icon: 'error',
-      confirmButtonText: 'Sim',
-      confirmButtonColor: '#3b67f2',
-      cancelButtonColor: '#2e3137',
+      title: "Atenção!",
+      text: "Deseja mesmo sair ?",
+      icon: "error",
+      confirmButtonText: "Sim",
+      confirmButtonColor: "#3b67f2",
+      cancelButtonColor: "#2e3137",
       showCancelButton: true,
-      cancelButtonText: 'Não'
+      cancelButtonText: "Não",
     }).then((e) => {
-      if (e.isConfirmed){
-        localStorage.removeItem('token');
-        navigate('/login');
-      } 
-    })
+      if (e.isConfirmed) {
+        localStorage.removeItem("token");
+        navigate("/login");
+      }
+    });
   }
 
   return (
@@ -76,9 +76,9 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li className={`${styles.navbar__item}`}>
-            <a onClick={logout}>
+            <NavLink to="#" onClick={logout}>
               Logout
-            </a>
+            </NavLink>
           </li>
         </ul>
 
@@ -123,6 +123,16 @@ export default function Navbar() {
             className={(navData) => (navData.isActive ? styles.current : "")}
           >
             Account
+          </NavLink>
+        </li>
+
+        <li className={`${styles.navbar__item__mobile}`}>
+          <NavLink
+            to="#"
+            className={(navData) => (navData.isActive ? styles.current : "")}
+            onClick={logout}
+          >
+            Logout
           </NavLink>
         </li>
       </div>

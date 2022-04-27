@@ -1,0 +1,12 @@
+.container {
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 2rem 0;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.nome {
+  font-weight: 600;
+}

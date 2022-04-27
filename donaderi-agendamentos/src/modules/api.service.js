@@ -7,6 +7,13 @@ export function apiUrl() {
   return "http://localhost:3300";
 }
 
+export async function makeFetch(body, url) {
+  requestOptions.body = JSON.stringify(body);
+  return await fetch(apiUrl() + url, requestOptions).then((response) => {
+    return handleResponse(response);
+  });
+}
+
 export async function makeRegister(body) {
   requestOptions.body = JSON.stringify(body);
   return await fetch(apiUrl() + "/register", requestOptions).then(
