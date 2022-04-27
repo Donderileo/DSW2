@@ -4,7 +4,6 @@ import { GetProfessionalService } from '../../services/Professional/GetAllProfes
 export class GetAllProfessionalController {
     async handle(request: Request, response: Response) {
         const { user_id } = request.body
-
         if (!user_id) {
             const service = new GetProfessionalService()
             const professionals = await service.executeAll();

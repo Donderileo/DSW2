@@ -5,7 +5,6 @@ import { GetAllAppointmentService } from '../../services/Appointments/GetAllAppo
 export class GetAllAppointmentController {
     async handle(request: Request, response: Response) {
         const { token } = request.body;
-
         try {
             const tokenObject = jwt.verify(token, process.env.JWT_SECRET)
             var user_id = tokenObject.id
@@ -20,10 +19,10 @@ export class GetAllAppointmentController {
             return response.status(400).json({ "message": "You dont have a role, so you dont have a appointment" })
         }
         else if (role == 'Client') {
-            var appointments = await service.executeForClient(role, user_id)
+            var appointments = await service.executeForClient(user_id)
         }
         else if (role == 'Professional') {
-            var appointments = await service.executeForProfessional(role, user_id)
+            var appointments = await service.executeForProfessional(user_id)
         }
         if (appointments instanceof Error) {
             return response.status(403).json(appointments.message)

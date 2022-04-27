@@ -10,8 +10,9 @@ export class GetProfessionalService {
     }
     async executeOne(user_id) {
         const repo = getRepository(Professional)
-        const client = await repo.findOne({ user_id })
-        return client
+        const professional = await repo.findOne({ user_id:user_id })
+        console.log(professional)
+        return professional
     }
 }
 

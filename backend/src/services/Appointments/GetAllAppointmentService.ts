@@ -2,8 +2,7 @@ import { getRepository } from "typeorm";
 import { Appointment } from "../../entities/Appointment";
 
 export class GetAllAppointmentService {
-    async executeForClient(role, user_id) {
-        console.log(role, user_id)
+    async executeForClient(user_id) {
         const repo = getRepository(Appointment);
         const appointments = await repo.find({ client_id: user_id })
         console.log(appointments)
@@ -14,7 +13,7 @@ export class GetAllAppointmentService {
         return appointments
     }
 
-    async executeForProfessional(role, user_id) {
+    async executeForProfessional(user_id) {
         const repo = getRepository(Appointment);
         const appointments = await repo.find({ professional_id: user_id })
 
