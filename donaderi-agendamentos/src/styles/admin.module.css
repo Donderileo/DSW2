@@ -1,0 +1,48 @@
+.container {
+  background: var(--black-background);
+  min-height: 85vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: var(--white);
+}
+
+.client_table,
+.professional_table {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.line {
+  display: flex;
+}
+.acoes {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--accent);
+}
+.description {
+  display: none !important;
+}
+.items {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.2rem;
+}

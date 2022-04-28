@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import { parseJwt } from "../modules/utils";
-
-export default function WithNavbarLayout() {
+export default function AdminLayout() {
   const navigate = useNavigate();
   const [userTokenObject, setUserTokenObject] = useState("");
-
   useEffect(() => {
     var token = localStorage.getItem("token");
     if (token !== null) {
-      var tokenObjeto = parseJwt(token);
-      setUserTokenObject(tokenObjeto);
-      if (tokenObjeto.role === null) {
-        navigate("/complete");
-      } else if (tokenObjeto.role === "Admin") {
-        navigate("/admin");
+      var tokenObject = parseJwt(token);
+      if (tokenObject.role !== "Admin") {
+        navigate("/dashboard");
       }
     } else {
       navigate("/login");
@@ -25,13 +19,8 @@ export default function WithNavbarLayout() {
 
   return (
     <>
-      {userTokenObject && (
-        <>
-          <Navbar></Navbar>
-          <Outlet></Outlet>
-          <Footer></Footer>
-        </>
-      )}
+      <Outlet></Outlet>
+      <Footer></Footer>
     </>
   );
 }

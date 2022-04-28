@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import Appointment from "../components/Appointment";
 import { makeFetch } from "../modules/api.service";
 import { parseJwt } from "../modules/utils";
@@ -45,22 +46,53 @@ function Dashboard() {
       }
     });
   }, [appointments]);
+  async function deleteAppointment(appointment) {
+    const requestObject = appointment;
+    appointment.token = token;
+    makeFetch(appointment, "/appointment", "DELETE").then((response) => {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-right",
+        iconColor: "white",
+        customClass: {
+          popup: "colored-toast",
+        },
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Success",
+      });
+      window.location.reload();
+    });
+  }
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>Bem vindo {tokenObject.username}!</div>
-      <div className={styles.subtitle}>Role: {tokenObject.role}</div>
-
-      <div className={styles.consultas}>Suas últimas consultas:</div>
-      {done &&
-        appointments.length !== 0 &&
-        appointments.map((appointment) => (
-          <Appointment
-            key={appointment}
-            nome={appointment.nome}
-            date={appointment.date}
-          />
-        ))}
+      <div className={styles.left}>
+        <div className={styles.title}>Bem vindo {tokenObject.username}!</div>
+        <div className={styles.subtitle}>Role: {tokenObject.role}</div>
+      </div>
+      <div className={styles.right}>
+        <div className={styles.consultas}>
+          Suas consultas:
+          {done &&
+            appointments.length !== 0 &&
+            appointments.map((appointment, id) => (
+              <Appointment
+                key={id}
+                nome={appointment.nome}
+                date={appointment.date}
+                onClick={() => {
+                  deleteAppointment(appointment);
+                }}
+              />
+            ))}
+          {appointments.length === 0 && <p>Você não tem consultas</p>}
+        </div>
+      </div>
     </div>
   );
 }

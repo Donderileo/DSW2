@@ -53,18 +53,10 @@ export default function Navbar() {
           </li>
           <li className={`${styles.navbar__item}`}>
             <NavLink
-              to="/professional"
+              to="/professionals"
               className={(navData) => (navData.isActive ? styles.current : "")}
             >
               Professionals
-            </NavLink>
-          </li>
-          <li className={`${styles.navbar__item}`}>
-            <NavLink
-              to="/appointments"
-              className={(navData) => (navData.isActive ? styles.current : "")}
-            >
-              Appointments
             </NavLink>
           </li>
           <li className={`${styles.navbar__item}`}>
@@ -103,18 +95,10 @@ export default function Navbar() {
         </li>
         <li className={`${styles.navbar__item__mobile}`}>
           <NavLink
-            to="/professional"
+            to="/professionals"
             className={(navData) => (navData.isActive ? styles.current : "")}
           >
             Professionals
-          </NavLink>
-        </li>
-        <li className={`${styles.navbar__item__mobile}`}>
-          <NavLink
-            to="/appointments"
-            className={(navData) => (navData.isActive ? styles.current : "")}
-          >
-            Appointments
           </NavLink>
         </li>
         <li className={`${styles.navbar__item__mobile}`}>

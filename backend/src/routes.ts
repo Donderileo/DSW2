@@ -25,7 +25,7 @@ routes.delete("/user", new DeleteUserController().handle)
 routes.post("/professional", new CreateProfessionalController().handle)
 routes.post("/professionalGet", new GetAllProfessionalController().handle)
 routes.put("/professional", new UpdateProfessionalController().handle)
-// routes.get("/professional/search", new SearchProfessionalController().handle)
+routes.get("/professional/search", new SearchProfessionalController().handle)
 
 routes.post("/clientGet", new GetAllClientController().handle)
 routes.post("/client", new CreateClientController().handle)

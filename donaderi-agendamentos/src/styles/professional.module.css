@@ -1,0 +1,38 @@
+.card {
+  background: var(--grey-background);
+  width: 20rem;
+  height: 25rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: 1rem;
+  transition: 0.3s ease all;
+}
+
+.card:hover {
+  box-shadow: 0px 5px 10px 3px var(--accent-hover);
+}
+
+.nome {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.area {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.area span {
+  color: var(--accent-hover);
+}
+
+.descricao {
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}

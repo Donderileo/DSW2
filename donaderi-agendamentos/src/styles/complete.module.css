@@ -1,0 +1,36 @@
+.login {
+  background: var(--light-background);
+  width: 300px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 50px;
+
+  border: 1px solid var(--white);
+  border-radius: 1rem;
+}
+
+.header {
+  font-size: 3rem;
+  color: var(--accent);
+  font-weight: 500;
+  text-align: center;
+}
+
+.btnEnviar {
+  cursor: pointer;
+
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 1rem;
+  background: var(--accent);
+  padding: 10px 50px;
+  border-radius: 0.5em;
+  margin-top: 15px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+}
