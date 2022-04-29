@@ -7,4 +7,31 @@
   align-items: center;
   text-align: center;
   gap: 3rem;
+
+  color: var(--white);
+  font-size:3rem;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:2rem;
+  margin-top: 4rem;
+}
+
+.container form input {
+
+  padding: 10px;
+  border-radius: 0.5em;
+
+  margin-top: 15px;
+
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.container form input:focus {
+  border: 2px solid rgba(0, 0, 0, 0.18) !important;
 }

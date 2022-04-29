@@ -8,6 +8,8 @@ import styles from "../styles/admin.module.css";
 function Admin() {
   const [clients, setClients] = useState([]);
   const [professionals, setProfessionals] = useState([]);
+  const [handleEditClient, setHandleEditClient] = useState(false)
+  const [handleEditProfessional, setHandleEditProfessional] = useState(false)
 
   async function getUsers() {
     var [responseClients, responseProfessionals] = await Promise.all([
@@ -18,9 +20,7 @@ function Admin() {
     setProfessionals(responseProfessionals.professionals);
   }
 
-  function handleEditClient(client) {}
 
-  function handleEditProfessional(professional) {}
 
   async function handleDeleteClient(client) {
     const user_id = client.user_id;
@@ -77,12 +77,12 @@ function Admin() {
             <div className={styles.acoes}>
               <FaEdit
                 onClick={() => {
-                  handleEditClient(client);
+                  handleEditClient();
                 }}
               />
               <IoIosCloseCircleOutline
                 onClick={() => {
-                  handleDeleteClient(client);
+                  handleDeleteClient();
                 }}
               />
             </div>
@@ -110,11 +110,12 @@ function Admin() {
               </div>
             </div>
             <div className={styles.acoes}>
-              <FaEdit
+
+              {/* <FaEdit
                 onClick={() => {
                   handleEditProfessional(professional);
                 }}
-              />
+              /> */}
               <IoIosCloseCircleOutline
                 onClick={() => {
                   handleDeleteProfessional(professional);
